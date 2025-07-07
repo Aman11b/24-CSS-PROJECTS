@@ -1,0 +1,38 @@
+:root {
+  --font-main: "Noto Sans", sans-serif;
+  --bg-main: #311417;
+  --bg-card: #1e1f26;
+  --bg-starts: #131417;
+  --username: #b7bbc8;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+p,
+h3 {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  padding-left: 0;
+}
+ul li {
+  list-style-type: none;
+}
+
+.card {
+  max-width: 300px;
+  background: var(--bg-card);
+  margin: auto;
+}
+
+.card-thumnail img {
+  max-width: 100%;
+}
+.card-avatar img {
+  height: 40px;
+  aspect-ratio: 1;
+}
