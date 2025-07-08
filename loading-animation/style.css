@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-light: lightgray;
+  --color-dark: darkgray;
+  --color-black: black;
+}
+
+main {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+.loading-balls {
+  display: flex;
+  flex-direction: row;
+  gap: 1em;
+}
+
+.ball {
+  background-color: var(--color-dark);
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+
+  animation: loading infinite alternate 1000ms;
+}
+
+@keyframes loading {
+  from {
+    background-color: var(--color-dark);
+  }
+  to {
+    background-color: var(--color-light);
+    transform: scale(1.1);
+  }
+}
