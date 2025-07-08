@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-red: rgb(236, 47, 47);
+  --color-yellow: rgb(247, 247, 21);
+  --color-green: rgb(8, 223, 8);
+}
+
+main {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+
+  background-color: black;
+}
+
+.loading-cube {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5em;
+}
+
+.one {
+  background-color: var(--color-red);
+}
+.two {
+  background-color: var(--color-yellow);
+}
+.three {
+  background-color: var(--color-green);
+}
+
+.cube {
+  width: 30px;
+  aspect-ratio: 1;
+  transform: rotate(45deg);
+
+  animation: loading infinite 1s ease-in-out;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(-45deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}
