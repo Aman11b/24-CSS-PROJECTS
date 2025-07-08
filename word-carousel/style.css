@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+main {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+h1::after {
+  content: "";
+
+  background-color: lightskyblue;
+  color: white;
+  padding: 1rem;
+  margin-left: 1rem;
+  border-radius: 5px;
+
+  animation: swap 5s infinite;
+}
+@keyframes swap {
+  0% {
+    content: "coading";
+  }
+  25% {
+    content: "Books";
+  }
+  50% {
+    content: "Ghazals";
+  }
+  75% {
+    content: "Travel";
+  }
+  100% {
+    content: "No one";
+  }
+}
