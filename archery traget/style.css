@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: #282828;
+  --blue: #2892f9;
+  --red: #fb2f27;
+  --yellow: #fdfe29;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  place-content: center;
+}
+.ring {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.ring1 {
+  background-color: var(--black);
+  width: 200px;
+}
+.ring2 {
+  background-color: var(--blue);
+  width: 150px;
+}
+.ring3 {
+  background-color: var(--red);
+  width: 100px;
+}
+.ring4 {
+  background-color: var(--yellow);
+  width: 50px;
+}
