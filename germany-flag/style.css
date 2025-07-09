@@ -1,0 +1,48 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --black:#000000;
+    --red:#de0002;
+    --yellow:#ffce00;
+
+    --flag-heigh:150px;
+}
+
+main{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+
+    background-color: white;
+}
+
+.flag{
+    height: var(--flag-heigh);
+    width: calc(150px*3/2);
+
+    margin: 2em auto;
+
+    /* display: grid; */
+    display: flex;
+    flex-direction: column;
+}
+
+.strips{
+    flex-grow: 1;
+}
+
+.black{
+    background-color:var(--black);
+}
+.red{
+    background: var(--red);
+}
+.yellow{
+    background:var(--yellow);
+}
