@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --white:#fff;
+    --red:#ff0002;
+    --flag-hw:200px
+}
+
+main{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+
+    background-color: var(--white);
+}
+
+.flag{
+    background-color: var(--red);
+    aspect-ratio: 1;
+    height: var(--flag-hw);
+
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+.cross1{
+    height: calc(var(--flag-hw)*3/16);
+    width: calc(var(--flag-hw)*5/8);
+    background-color: var(--white);
+}
+.cross2{
+    width:calc(var(--flag-hw)*3/16) ;
+    height:calc(var(--flag-hw)*5/8) ;
+    background-color: var(--white);
+    position: absolute;
+}
