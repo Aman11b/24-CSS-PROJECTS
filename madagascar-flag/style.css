@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --white:#ffffff;
+    --red:#fc3e32;
+    --green:#007e39;
+
+    --flag-heigh:150px;
+}
+ 
+main{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+
+    background-color: rgb(16, 17, 16);
+}
+.flag{
+    background-color: aqua;
+    height: var(--flag-heigh);
+
+    display: flex;
+    flex-direction: row;
+}
+.stripes{
+    flex-grow: 1;
+}
+.white{
+    background-color: var(--white);
+    width: calc(
+        var(--flag-heigh)/2
+    );
+}
+
+.flag > div{
+    display: flex;
+    flex-direction: column;
+}
+
+.flag > div > div{
+    flex-grow: 1;
+}
+.red{
+    background-color: var(--red);
+    height: calc(var(--flag-heigh)/2);
+
+    width: var(--flag-heigh);
+}
+.green{
+    background-color: var(--green);
+    height:calc(
+        var(--flag-heigh)/2);
+    width: var(--flag-heigh);
+}
