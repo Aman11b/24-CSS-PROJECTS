@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+    --white:#fff;
+    --red:#ff0002;
+    --flag-hw:200px
+}
+
+main{
+    display: grid;
+    height: 100vh;
+    place-items: center;
+
+    background-color:palevioletred;
+}
+
+.flag{
+    background-color:var(--white);
+    height: var(--flag-hw);
+    aspect-ratio: 3/2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle{
+    height: calc(
+        var(--flag-hw)*3/5
+    );
+    aspect-ratio: 1;
+    background-color: var(--red);
+    border-radius: 50%;
+    /* aspect-ratio: 5/2; */
+}
