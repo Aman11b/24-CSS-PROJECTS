@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --card-height: 200px;
+}
+
+main {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+
+  background-color: azure;
+}
+
+.card {
+  height: var(--card-height);
+  aspect-ratio: 2/3;
+  border: 1px solid #000;
+
+  background-color: white;
+  border-radius: 5px;
+  display: grid;
+  padding: 0.5em;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+}
+.bottom {
+  transform: rotate(180deg);
+}
