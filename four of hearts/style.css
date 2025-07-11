@@ -1,0 +1,54 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --card-height:200px
+}
+main{
+    display: grid;
+    height: 100vh;
+    place-content: center;
+
+    background-color:lightgrey;
+}
+.card{
+    border: 1px solid black;
+    aspect-ratio: 2/3;
+    height: var(--card-height);
+    color: red;
+    border-radius: 5px;
+    background-color: white;
+
+    font-size: 1.2em;
+
+    padding: .25em;
+
+
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.middle{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+
+    font-size: 2em;
+}
+.right{
+    transform: rotate(180deg);
+}
+
+.left > div:first-child,
+.right > div:first-child{
+    padding-left: 2px;
+}
+
+.middle :nth-child(3),
+.middle :nth-child(4){
+    transform: scaleY(-1);
+}
