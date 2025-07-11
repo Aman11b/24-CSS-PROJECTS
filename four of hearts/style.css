@@ -16,7 +16,7 @@ main{
     background-color:lightgrey;
 }
 .card{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     aspect-ratio: 2/3;
     height: var(--card-height);
     color: red;
