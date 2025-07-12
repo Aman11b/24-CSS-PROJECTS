@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+    --progressbar-bg:lightgray;
+    --start:red;
+    --middle:blue;
+    --finish:green;
+}
+main{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    background-color: white;
+}
+.container{
+    width: 80%;
+}
+.progress-bar{
+    height: 1.5em;
+    border-radius: 20px;
+    background-color: var(--progressbar-bg);
+}
+.progress-status{
+    /* border-radius: 20px; */
+    width: 0%;
+    background:var(--start);
+    animation:progress 6s linear infinite;
+}
+
+@keyframes progress{
+    50%{
+        width: 50%;
+        background: var(--middle);
+    }
+    100%{
+        width: 100%;
+        background: var(--finish);
+    }
+}
